@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PracticeQAAutomation logo PracticeQAAutomation" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "PracticeQAAutomation logo" [ref=e5]
+        - generic [ref=e6]: PracticeQAAutomation
+      - generic [ref=e7]:
+        - button "Switch to dark theme" [ref=e8]
+        - button "Toggle menu" [ref=e12]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - button "Go back" [ref=e19]
+        - link "N NovaShop" [ref=e22] [cursor=pointer]:
+          - /url: /shop/products
+          - generic [ref=e23]: "N"
+          - generic [ref=e24]: NovaShop
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - paragraph [ref=e28]: E-commerce practice app
+          - heading "Welcome to Nova Shop" [level=1] [ref=e29]
+          - paragraph [ref=e30]: "A realistic store to automate end to end: login, search, filter, sort, product details, cart, coupons, checkout validation, a declined card and order history."
+          - generic [ref=e31]:
+            - heading "Test accounts" [level=2] [ref=e32]
+            - list [ref=e33]:
+              - listitem [ref=e34]:
+                - code [ref=e35]: demo_user
+                - generic [ref=e36]: Standard account
+              - listitem [ref=e37]:
+                - code [ref=e38]: locked_user
+                - generic [ref=e39]: Locked out — login shows an error
+              - listitem [ref=e40]:
+                - code [ref=e41]: slow_user
+                - generic [ref=e42]: Login takes ~3 seconds — practice waits
+            - paragraph [ref=e43]:
+              - text: "Password for all accounts:"
+              - code [ref=e44]: Demo@123
+        - generic [ref=e45]:
+          - heading "Sign in" [level=2] [ref=e46]
+          - paragraph [ref=e47]: Use one of the test accounts.
+          - generic [ref=e48]: Username
+          - textbox "Username" [disabled] [ref=e49]:
+            - /placeholder: demo_user
+          - generic [ref=e50]: Password
+          - generic [ref=e51]:
+            - textbox "Password" [disabled] [ref=e52]:
+              - /placeholder: ••••••••
+            - button "Show" [ref=e53]
+          - button "Sign in" [disabled] [ref=e54]
+  - contentinfo [ref=e55]:
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - img "PracticeQAAutomation logo" [ref=e59]
+          - generic [ref=e60]: PracticeQAAutomation
+        - paragraph [ref=e61]: A free sandbox of real apps and interactive elements for Selenium, Playwright and Cypress practice.
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: Tools
+          - link "Selenium" [ref=e65] [cursor=pointer]:
+            - /url: /selenium
+          - link "Playwright" [ref=e66] [cursor=pointer]:
+            - /url: /playwright
+          - link "Cypress" [ref=e67] [cursor=pointer]:
+            - /url: /cypress
+        - generic [ref=e68]:
+          - generic [ref=e69]: Apps
+          - link "All domain apps" [ref=e70] [cursor=pointer]:
+            - /url: /apps
+          - link "Nova Shop" [ref=e71] [cursor=pointer]:
+            - /url: /shop
+          - link "TrustBank" [ref=e72] [cursor=pointer]:
+            - /url: /apps/bank
+          - link "SecureLife" [ref=e73] [cursor=pointer]:
+            - /url: /apps/insurance
+        - generic [ref=e74]:
+          - generic [ref=e75]: Practice
+          - link "Challenges" [ref=e76] [cursor=pointer]:
+            - /url: /challenges
+          - link "Basic Auth" [ref=e77] [cursor=pointer]:
+            - /url: /misc/basic-auth
+          - link "✨ AI tools" [ref=e78] [cursor=pointer]:
+            - /url: /ai
+          - link "Test case library" [ref=e79] [cursor=pointer]:
+            - /url: /test-cases
+          - link "About Me" [ref=e80] [cursor=pointer]:
+            - /url: /about
+          - link "Report a bug" [ref=e81] [cursor=pointer]:
+            - /url: /about#feedback
+    - generic [ref=e83]:
+      - paragraph [ref=e84]:
+        - text: © 2026 PracticeQAAutomation. All rights reserved. ·
+        - link "Privacy" [ref=e85] [cursor=pointer]:
+          - /url: /privacy
+      - paragraph [ref=e86]:
+        - text: Made by
+        - link "Amir" [ref=e87] [cursor=pointer]:
+          - /url: /about
+        - text: with
+        - img "love" [ref=e88]: ❤️

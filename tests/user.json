@@ -1,0 +1,17 @@
+{
+  "validUser": {
+    "username": "demo_user",
+    "password": "Demo@123",
+    "name": "Standard account"
+  },
+  "lockedUser": {
+    "username": "locked_user",
+    "password": "Demo@123",
+    "name": "Locked out — login shows an error"
+  },
+  "slowuser": {
+    "username": "slow_user",
+    "password": "Demo@123",
+    "name": "slow_userLogin takes ~3 seconds — practice waits"
+  }
+}

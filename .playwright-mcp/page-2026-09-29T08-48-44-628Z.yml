@@ -1,0 +1,147 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - link "PracticeQAAutomation logo PracticeQAAutomation" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+        - img "PracticeQAAutomation logo" [ref=f3e5]
+        - generic [ref=f3e6]: PracticeQAAutomation
+      - generic [ref=f3e7]:
+        - button "Switch to light theme" [ref=f3e8]
+        - button "Toggle menu" [ref=f3e12]
+  - main [ref=f3e15]:
+    - generic [ref=f3e16]:
+      - generic [ref=f3e18]:
+        - button "Go back" [ref=f3e19]
+        - link "N NovaShop" [ref=f3e22] [cursor=pointer]:
+          - /url: /shop/products
+          - generic [ref=f3e23]: "N"
+          - generic [ref=f3e24]: NovaShop
+        - navigation [ref=f3e25]:
+          - link "Products" [ref=f3e26] [cursor=pointer]:
+            - /url: /shop/products
+          - link "My orders" [ref=f3e27] [cursor=pointer]:
+            - /url: /shop/orders
+        - generic [ref=f3e28]:
+          - button "🧑‍🏫 AI coach" [ref=f3e29]:
+            - text: 🧑‍🏫
+            - generic [ref=f3e30]: AI coach
+          - generic [ref=f3e31]:
+            - text: Hi,
+            - strong [ref=f3e32]: demo_user
+          - link "Cart with 0 items" [ref=f3e33] [cursor=pointer]:
+            - /url: /shop/cart
+          - button "Log out" [ref=f3e38] [cursor=pointer]
+      - generic [ref=f3e40]:
+        - navigation "Breadcrumb" [ref=f3e41]:
+          - link "Products" [ref=f3e42] [cursor=pointer]:
+            - /url: /shop/products
+          - generic [ref=f3e43]: /
+          - generic [ref=f3e44]: Electronics
+          - generic [ref=f3e45]: /
+          - generic [ref=f3e46]: Aurora Wireless Headphones
+        - generic [ref=f3e47]:
+          - img "Aurora Wireless Headphones" [ref=f3e48]:
+            - generic [ref=f3e49]: 🎧
+          - generic [ref=f3e50]:
+            - text: Electronics
+            - heading "Aurora Wireless Headphones" [level=1] [ref=f3e51]
+            - generic [ref=f3e52]:
+              - generic "Rated 4.6 out of 5" [ref=f3e53]:
+                - generic [ref=f3e54]: ★★★★★
+                - generic [ref=f3e55]: "4.6"
+              - generic [ref=f3e56]: (318 reviews)
+            - paragraph [ref=f3e57]: $129.99
+            - paragraph [ref=f3e58]: In stock
+            - 'group "Colour: Midnight" [ref=f3e59]':
+              - generic [ref=f3e61]:
+                - generic [ref=f3e62] [cursor=pointer]:
+                  - radio "Midnight" [checked] [ref=f3e63]
+                  - text: Midnight
+                - generic [ref=f3e64] [cursor=pointer]:
+                  - radio "Lilac" [ref=f3e65]
+                  - text: Lilac
+                - generic [ref=f3e66] [cursor=pointer]:
+                  - radio "Snow" [ref=f3e67]
+                  - text: Snow
+            - generic [ref=f3e68]:
+              - generic [ref=f3e69]:
+                - button "Decrease quantity" [disabled] [ref=f3e70]: −
+                - textbox "Quantity" [ref=f3e71]: "1"
+                - button "Increase quantity" [ref=f3e72]: +
+              - button "Add to cart" [ref=f3e73] [cursor=pointer]
+            - generic [ref=f3e74]:
+              - tablist [ref=f3e75]:
+                - tab "description" [selected] [ref=f3e76]
+                - tab "reviews" [ref=f3e77]
+                - tab "shipping" [ref=f3e78]
+              - tabpanel [ref=f3e79]:
+                - paragraph [ref=f3e80]: Over-ear headphones with active noise cancelling, 40-hour battery and a fold-flat design.
+        - generic [ref=f3e81]:
+          - heading "You may also like" [level=2] [ref=f3e82]
+          - generic [ref=f3e83]:
+            - link "Pulse Smartwatch Pulse Smartwatch $199.00" [ref=f3e84] [cursor=pointer]:
+              - /url: /shop/product/p2
+              - img "Pulse Smartwatch" [ref=f3e85]:
+                - generic [ref=f3e86]: ⌚
+              - generic [ref=f3e87]:
+                - generic [ref=f3e88]: Pulse Smartwatch
+                - generic [ref=f3e89]: $199.00
+            - link "Nimbus Bluetooth Speaker Nimbus Bluetooth Speaker $59.50" [ref=f3e90] [cursor=pointer]:
+              - /url: /shop/product/p3
+              - img "Nimbus Bluetooth Speaker" [ref=f3e91]:
+                - generic [ref=f3e92]: 🔊
+              - generic [ref=f3e93]:
+                - generic [ref=f3e94]: Nimbus Bluetooth Speaker
+                - generic [ref=f3e95]: $59.50
+  - contentinfo [ref=f3e96]:
+    - generic [ref=f3e97]:
+      - generic [ref=f3e98]:
+        - generic [ref=f3e99]:
+          - img "PracticeQAAutomation logo" [ref=f3e100]
+          - generic [ref=f3e101]: PracticeQAAutomation
+        - paragraph [ref=f3e102]: A free sandbox of real apps and interactive elements for Selenium, Playwright and Cypress practice.
+      - generic [ref=f3e103]:
+        - generic [ref=f3e104]:
+          - generic [ref=f3e105]: Tools
+          - link "Selenium" [ref=f3e106] [cursor=pointer]:
+            - /url: /selenium
+          - link "Playwright" [ref=f3e107] [cursor=pointer]:
+            - /url: /playwright
+          - link "Cypress" [ref=f3e108] [cursor=pointer]:
+            - /url: /cypress
+        - generic [ref=f3e109]:
+          - generic [ref=f3e110]: Apps
+          - link "All domain apps" [ref=f3e111] [cursor=pointer]:
+            - /url: /apps
+          - link "Nova Shop" [ref=f3e112] [cursor=pointer]:
+            - /url: /shop
+          - link "TrustBank" [ref=f3e113] [cursor=pointer]:
+            - /url: /apps/bank
+          - link "SecureLife" [ref=f3e114] [cursor=pointer]:
+            - /url: /apps/insurance
+        - generic [ref=f3e115]:
+          - generic [ref=f3e116]: Practice
+          - link "Challenges" [ref=f3e117] [cursor=pointer]:
+            - /url: /challenges
+          - link "Basic Auth" [ref=f3e118] [cursor=pointer]:
+            - /url: /misc/basic-auth
+          - link "✨ AI tools" [ref=f3e119] [cursor=pointer]:
+            - /url: /ai
+          - link "Test case library" [ref=f3e120] [cursor=pointer]:
+            - /url: /test-cases
+          - link "About Me" [ref=f3e121] [cursor=pointer]:
+            - /url: /about
+          - link "Report a bug" [ref=f3e122] [cursor=pointer]:
+            - /url: /about#feedback
+    - generic [ref=f3e124]:
+      - paragraph [ref=f3e125]:
+        - text: © 2026 PracticeQAAutomation. All rights reserved. ·
+        - link "Privacy" [ref=f3e126] [cursor=pointer]:
+          - /url: /privacy
+      - paragraph [ref=f3e127]:
+        - text: Made by
+        - link "Amir" [ref=f3e128] [cursor=pointer]:
+          - /url: /about
+        - text: with
+        - img "love" [ref=f3e129]: ❤️
+  - alert [ref=f3e130]

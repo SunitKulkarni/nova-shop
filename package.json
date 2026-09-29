@@ -1,0 +1,21 @@
+{
+  "name": "nova-shop",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end tests for Nova Shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "dotenv": "^18.0.4",
+    "reporting-labs": "^0.6.5",
+    "typescript": "^7.0.2"
+  }
+}

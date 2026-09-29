@@ -1,0 +1,301 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PracticeQAAutomation logo PracticeQAAutomation" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "PracticeQAAutomation logo" [ref=e5]
+        - generic [ref=e6]: PracticeQAAutomation
+      - generic [ref=e7]:
+        - button "Switch to light theme" [ref=e89]
+        - button "Toggle menu" [ref=e12]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - button "Go back" [ref=e19]
+        - link "N NovaShop" [ref=e22] [cursor=pointer]:
+          - /url: /shop/products
+          - generic [ref=e23]: "N"
+          - generic [ref=e24]: NovaShop
+        - navigation [ref=e94]:
+          - link "Products" [ref=e95] [cursor=pointer]:
+            - /url: /shop/products
+          - link "My orders" [ref=e96] [cursor=pointer]:
+            - /url: /shop/orders
+        - generic [ref=e97]:
+          - button "🧑‍🏫 AI coach" [ref=e98]:
+            - text: 🧑‍🏫
+            - generic [ref=e99]: AI coach
+          - generic [ref=e100]:
+            - text: Hi,
+            - strong [ref=e101]: demo_user
+          - link "Cart with 0 items" [ref=e102] [cursor=pointer]:
+            - /url: /shop/cart
+          - button "Log out" [ref=e107] [cursor=pointer]
+      - generic [ref=e108]:
+        - generic [ref=e110]:
+          - heading "Products" [level=1] [ref=e111]
+          - paragraph [ref=e112]: Showing 12 of 12 products
+        - generic [ref=e113]:
+          - searchbox "Search products" [ref=e115]
+          - combobox "Category" [ref=e116]:
+            - option "All categories" [selected]
+            - option "Electronics"
+            - option "Fashion"
+            - option "Home"
+            - option "Sports"
+          - combobox "Sort by" [ref=e117]:
+            - option "Featured" [selected]
+            - option "Name (A to Z)"
+            - option "Name (Z to A)"
+            - option "Price (low to high)"
+            - option "Price (high to low)"
+            - option "Top rated"
+          - generic [ref=e118]:
+            - checkbox "In stock only" [ref=e119]
+            - text: In stock only
+        - list [ref=e120]:
+          - listitem [ref=e121]:
+            - link "Aurora Wireless Headphones Bestseller" [ref=e122] [cursor=pointer]:
+              - /url: /shop/product/p1
+              - img "Aurora Wireless Headphones" [ref=e123]:
+                - generic [ref=e124]: 🎧
+              - generic [ref=e125]: Bestseller
+            - generic [ref=e126]:
+              - generic [ref=e127]: Electronics
+              - link "Aurora Wireless Headphones" [ref=e128] [cursor=pointer]:
+                - /url: /shop/product/p1
+              - generic "Rated 4.6 out of 5" [ref=e130]:
+                - generic [ref=e131]: ★★★★★
+                - generic [ref=e132]: "4.6"
+              - generic [ref=e133]:
+                - generic [ref=e134]: $129.99
+                - button "Add to cart" [ref=e135] [cursor=pointer]
+          - listitem [ref=e136]:
+            - link "Pulse Smartwatch New" [ref=e137] [cursor=pointer]:
+              - /url: /shop/product/p2
+              - img "Pulse Smartwatch" [ref=e138]:
+                - generic [ref=e139]: ⌚
+              - generic [ref=e140]: New
+            - generic [ref=e141]:
+              - generic [ref=e142]: Electronics
+              - link "Pulse Smartwatch" [ref=e143] [cursor=pointer]:
+                - /url: /shop/product/p2
+              - generic "Rated 4.3 out of 5" [ref=e145]:
+                - generic [ref=e146]: ★★★★
+                - generic [ref=e147]: ★
+                - generic [ref=e148]: "4.3"
+              - generic [ref=e149]:
+                - generic [ref=e150]: $199.00
+                - button "Add to cart" [ref=e151] [cursor=pointer]
+          - listitem [ref=e152]:
+            - link [ref=e153] [cursor=pointer]:
+              - /url: /shop/product/p3
+              - img "Nimbus Bluetooth Speaker" [ref=e154]:
+                - generic [ref=e155]: 🔊
+            - generic [ref=e156]:
+              - generic [ref=e157]: Electronics
+              - link "Nimbus Bluetooth Speaker" [ref=e158] [cursor=pointer]:
+                - /url: /shop/product/p3
+              - generic "Rated 4.1 out of 5" [ref=e160]:
+                - generic [ref=e161]: ★★★★
+                - generic [ref=e162]: ★
+                - generic [ref=e163]: "4.1"
+              - generic [ref=e164]:
+                - generic [ref=e165]: $59.50
+                - button "Sold out" [disabled] [ref=e166]
+          - listitem [ref=e167]:
+            - link [ref=e168] [cursor=pointer]:
+              - /url: /shop/product/p4
+              - img "Lumen Desk Lamp" [ref=e169]:
+                - generic [ref=e170]: 💡
+            - generic [ref=e171]:
+              - generic [ref=e172]: Home
+              - link "Lumen Desk Lamp" [ref=e173] [cursor=pointer]:
+                - /url: /shop/product/p4
+              - generic "Rated 4.7 out of 5" [ref=e175]:
+                - generic [ref=e176]: ★★★★★
+                - generic [ref=e177]: "4.7"
+              - generic [ref=e178]:
+                - generic [ref=e179]: $34.99
+                - button "Add to cart" [ref=e180] [cursor=pointer]
+          - listitem [ref=e181]:
+            - link "Terra Ceramic Mug Set Sale" [ref=e182] [cursor=pointer]:
+              - /url: /shop/product/p5
+              - img "Terra Ceramic Mug Set" [ref=e183]:
+                - generic [ref=e184]: ☕
+              - generic [ref=e185]: Sale
+            - generic [ref=e186]:
+              - generic [ref=e187]: Home
+              - link "Terra Ceramic Mug Set" [ref=e188] [cursor=pointer]:
+                - /url: /shop/product/p5
+              - generic "Rated 4.4 out of 5" [ref=e190]:
+                - generic [ref=e191]: ★★★★
+                - generic [ref=e192]: ★
+                - generic [ref=e193]: "4.4"
+              - generic [ref=e194]:
+                - generic [ref=e195]: $24.00
+                - button "Add to cart" [ref=e196] [cursor=pointer]
+          - listitem [ref=e197]:
+            - link [ref=e198] [cursor=pointer]:
+              - /url: /shop/product/p6
+              - img "Bloom Indoor Plant Kit" [ref=e199]:
+                - generic [ref=e200]: 🪴
+            - generic [ref=e201]:
+              - generic [ref=e202]: Home
+              - link "Bloom Indoor Plant Kit" [ref=e203] [cursor=pointer]:
+                - /url: /shop/product/p6
+              - generic "Rated 4 out of 5" [ref=e205]:
+                - generic [ref=e206]: ★★★★
+                - generic [ref=e207]: ★
+                - generic [ref=e208]: "4.0"
+              - generic [ref=e209]:
+                - generic [ref=e210]: $19.99
+                - button "Add to cart" [ref=e211] [cursor=pointer]
+          - listitem [ref=e212]:
+            - link [ref=e213] [cursor=pointer]:
+              - /url: /shop/product/p7
+              - img "Drift Denim Jacket" [ref=e214]:
+                - generic [ref=e215]: 🧥
+            - generic [ref=e216]:
+              - generic [ref=e217]: Fashion
+              - link "Drift Denim Jacket" [ref=e218] [cursor=pointer]:
+                - /url: /shop/product/p7
+              - generic "Rated 4.2 out of 5" [ref=e220]:
+                - generic [ref=e221]: ★★★★
+                - generic [ref=e222]: ★
+                - generic [ref=e223]: "4.2"
+              - generic [ref=e224]:
+                - generic [ref=e225]: $89.00
+                - button "Add to cart" [ref=e226] [cursor=pointer]
+          - listitem [ref=e227]:
+            - link "Stride Running Shoes Bestseller" [ref=e228] [cursor=pointer]:
+              - /url: /shop/product/p8
+              - img "Stride Running Shoes" [ref=e229]:
+                - generic [ref=e230]: 👟
+              - generic [ref=e231]: Bestseller
+            - generic [ref=e232]:
+              - generic [ref=e233]: Sports
+              - link "Stride Running Shoes" [ref=e234] [cursor=pointer]:
+                - /url: /shop/product/p8
+              - generic "Rated 4.8 out of 5" [ref=e236]:
+                - generic [ref=e237]: ★★★★★
+                - generic [ref=e238]: "4.8"
+              - generic [ref=e239]:
+                - generic [ref=e240]: $109.99
+                - button "Add to cart" [ref=e241] [cursor=pointer]
+          - listitem [ref=e242]:
+            - link [ref=e243] [cursor=pointer]:
+              - /url: /shop/product/p9
+              - img "Summit Backpack" [ref=e244]:
+                - generic [ref=e245]: 🎒
+            - generic [ref=e246]:
+              - generic [ref=e247]: Sports
+              - link "Summit Backpack" [ref=e248] [cursor=pointer]:
+                - /url: /shop/product/p9
+              - generic "Rated 4.5 out of 5" [ref=e250]:
+                - generic [ref=e251]: ★★★★★
+                - generic [ref=e252]: "4.5"
+              - generic [ref=e253]:
+                - generic [ref=e254]: $74.50
+                - button "Add to cart" [ref=e255] [cursor=pointer]
+          - listitem [ref=e256]:
+            - link "Flow Yoga Mat Sale" [ref=e257] [cursor=pointer]:
+              - /url: /shop/product/p10
+              - img "Flow Yoga Mat" [ref=e258]:
+                - generic [ref=e259]: 🧘
+              - generic [ref=e260]: Sale
+            - generic [ref=e261]:
+              - generic [ref=e262]: Sports
+              - link "Flow Yoga Mat" [ref=e263] [cursor=pointer]:
+                - /url: /shop/product/p10
+              - generic "Rated 4.3 out of 5" [ref=e265]:
+                - generic [ref=e266]: ★★★★
+                - generic [ref=e267]: ★
+                - generic [ref=e268]: "4.3"
+              - generic [ref=e269]:
+                - generic [ref=e270]: $39.00
+                - button "Add to cart" [ref=e271] [cursor=pointer]
+          - listitem [ref=e272]:
+            - link [ref=e273] [cursor=pointer]:
+              - /url: /shop/product/p11
+              - img "Classic Aviator Sunglasses" [ref=e274]:
+                - generic [ref=e275]: 🕶️
+            - generic [ref=e276]:
+              - generic [ref=e277]: Fashion
+              - link "Classic Aviator Sunglasses" [ref=e278] [cursor=pointer]:
+                - /url: /shop/product/p11
+              - generic "Rated 3.9 out of 5" [ref=e280]:
+                - generic [ref=e281]: ★★★★
+                - generic [ref=e282]: ★
+                - generic [ref=e283]: "3.9"
+              - generic [ref=e284]:
+                - generic [ref=e285]: $49.99
+                - button "Add to cart" [ref=e286] [cursor=pointer]
+          - listitem [ref=e287]:
+            - link "Cozy Knit Beanie New" [ref=e288] [cursor=pointer]:
+              - /url: /shop/product/p12
+              - img "Cozy Knit Beanie" [ref=e289]:
+                - generic [ref=e290]: 🧢
+              - generic [ref=e291]: New
+            - generic [ref=e292]:
+              - generic [ref=e293]: Fashion
+              - link "Cozy Knit Beanie" [ref=e294] [cursor=pointer]:
+                - /url: /shop/product/p12
+              - generic "Rated 4.6 out of 5" [ref=e296]:
+                - generic [ref=e297]: ★★★★★
+                - generic [ref=e298]: "4.6"
+              - generic [ref=e299]:
+                - generic [ref=e300]: $15.00
+                - button "Add to cart" [ref=e301] [cursor=pointer]
+  - contentinfo [ref=e55]:
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - img "PracticeQAAutomation logo" [ref=e59]
+          - generic [ref=e60]: PracticeQAAutomation
+        - paragraph [ref=e61]: A free sandbox of real apps and interactive elements for Selenium, Playwright and Cypress practice.
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: Tools
+          - link "Selenium" [ref=e65] [cursor=pointer]:
+            - /url: /selenium
+          - link "Playwright" [ref=e66] [cursor=pointer]:
+            - /url: /playwright
+          - link "Cypress" [ref=e67] [cursor=pointer]:
+            - /url: /cypress
+        - generic [ref=e68]:
+          - generic [ref=e69]: Apps
+          - link "All domain apps" [ref=e70] [cursor=pointer]:
+            - /url: /apps
+          - link "Nova Shop" [ref=e71] [cursor=pointer]:
+            - /url: /shop
+          - link "TrustBank" [ref=e72] [cursor=pointer]:
+            - /url: /apps/bank
+          - link "SecureLife" [ref=e73] [cursor=pointer]:
+            - /url: /apps/insurance
+        - generic [ref=e74]:
+          - generic [ref=e75]: Practice
+          - link "Challenges" [ref=e76] [cursor=pointer]:
+            - /url: /challenges
+          - link "Basic Auth" [ref=e77] [cursor=pointer]:
+            - /url: /misc/basic-auth
+          - link "✨ AI tools" [ref=e78] [cursor=pointer]:
+            - /url: /ai
+          - link "Test case library" [ref=e79] [cursor=pointer]:
+            - /url: /test-cases
+          - link "About Me" [ref=e80] [cursor=pointer]:
+            - /url: /about
+          - link "Report a bug" [ref=e81] [cursor=pointer]:
+            - /url: /about#feedback
+    - generic [ref=e83]:
+      - paragraph [ref=e84]:
+        - text: © 2026 PracticeQAAutomation. All rights reserved. ·
+        - link "Privacy" [ref=e85] [cursor=pointer]:
+          - /url: /privacy
+      - paragraph [ref=e86]:
+        - text: Made by
+        - link "Amir" [ref=e87] [cursor=pointer]:
+          - /url: /about
+        - text: with
+        - img "love" [ref=e88]: ❤️
+  - alert [ref=e93]

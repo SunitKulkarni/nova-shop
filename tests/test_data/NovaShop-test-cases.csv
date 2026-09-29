@@ -1,0 +1,46 @@
+App,ID,Type,Priority,Title,Steps,Expected result
+Nova Shop,NOVASHOP-01,Positive,P1,Login with valid standard user,"1. Open /shop
+2. Enter username demo_user and password Demo@123
+3. Click Login",Redirected to /shop/products and 12 product cards are shown
+Nova Shop,NOVASHOP-02,Positive,P1,Buy a product end to end,"1. Log in as demo_user
+2. Add Aurora Wireless Headphones to cart
+3. Open cart and click Checkout
+4. Fill all shipping fields and card 4242 4242 4242 4242, expiry 12/30, CVV 123
+5. Accept terms and Place order",Success page shows an order id matching NS-<digits>
+Nova Shop,NOVASHOP-03,Positive,P1,Apply SAVE10 coupon,"1. Add any product to cart
+2. Enter SAVE10 and Apply",Discount line shows 10% of the subtotal and the total drops accordingly
+Nova Shop,NOVASHOP-04,Positive,P2,Sort products by price low to high,"1. Log in
+2. Choose Price (low to high) in sort",Product prices are in ascending order
+Nova Shop,NOVASHOP-05,Positive,P2,Search narrows the grid,"1. Log in
+2. Type headphones in search",Exactly 1 product card is shown and the count text updates
+Nova Shop,NOVASHOP-06,Positive,P2,Order appears in history,"1. Place an order
+2. Open Orders",The new order id is listed in the orders table
+Nova Shop,NOVASHOP-07,Negative,P1,Wrong password is rejected,"1. Enter demo_user with password wrong
+2. Click Login","Error ""Username and password do not match any user in this service"""
+Nova Shop,NOVASHOP-08,Negative,P1,Locked user cannot log in,"1. Enter locked_user / Demo@123
+2. Click Login","Error ""Sorry, this user has been locked out."""
+Nova Shop,NOVASHOP-09,Negative,P2,Empty login form,1. Click Login with both fields empty,"Error ""Username is required"""
+Nova Shop,NOVASHOP-10,Negative,P2,Invalid coupon code,1. Enter coupon ABC123 and Apply,Error says the coupon is not valid and no discount is applied
+Nova Shop,NOVASHOP-11,Negative,P1,Declined card,1. Checkout with card 4000 0000 0000 0002,Payment error is shown and no order is created
+Nova Shop,NOVASHOP-12,Negative,P2,Checkout with empty form,1. Click Place order without filling anything,An error summary plus an error under every required field
+Nova Shop,NOVASHOP-13,Edge,P2,FLAT20 below the $100 threshold,"1. Cart subtotal under $100
+2. Apply FLAT20","Rejected with ""FLAT20 needs a subtotal of at least $100"""
+Nova Shop,NOVASHOP-14,Edge,P2,Slow user login,1. Log in as slow_user / Demo@123,"Products page loads after ~3 s (the test must wait, not sleep)"
+Nova Shop,NOVASHOP-15,Edge,P2,Route guard while signed out,1. Open /shop/cart directly while logged out,Redirected to /shop login
+Nova Shop,NOVASHOP-16,Edge,P3,Maximum quantity in cart,"1. Add a low-stock product until the cart holds all its stock
+2. Open its product page","Button reads ""Max quantity in cart"" and is disabled"
+Nova Shop,NOVASHOP-E2E-01,End-to-end,P1,Guest to paid order with coupon,"1. Open /shop and log in as demo_user / Demo@123
+2. Search ""headphones"" and add Aurora Wireless Headphones to the cart
+3. Open the cart and apply coupon SAVE10
+4. Checkout with valid shipping details and card 4242 4242 4242 4242, 12/30, 123
+5. Accept terms and place the order
+6. Open Orders","Success page shows an NS-<digits> order id, the discount is applied, and the same order appears first in the orders table"
+Nova Shop,NOVASHOP-E2E-02,End-to-end,P1,Declined card then cash on delivery,"1. Log in and add two products
+2. Checkout with the declined card 4000 0000 0000 0002
+3. Observe the payment error
+4. Switch to Cash on delivery and place the order again",First attempt shows a payment error with no order created; the second succeeds and only one order is listed in history
+Nova Shop,NOVASHOP-E2E-03,End-to-end,P2,Cart survives navigation and logout rules,"1. Log in and add 3 items
+2. Change a quantity in the cart
+3. Navigate to a product page and back
+4. Log out
+5. Try to open /shop/cart directly",Cart badge and totals stay consistent while navigating; after logout /shop/cart redirects to the login page
