@@ -7,25 +7,25 @@ test('NOVASHOP-01 P1: Login with valid standard user', async ({ shop, users, sho
   await shop.login.open();
   await shop.login.signIn(users.validUser);
   await expect(shop.products.productCards).toHaveCount(12);
-  await shopAssertions.productsCount(12);
+  await shopAssertions.products.productCount(12);
 });
 
 test('NOVASHOP-07 P1: Wrong password is rejected', async ({ shop, users, shopAssertions }) => {
   await shop.login.open();
   await shop.login.signIn({ ...users.validUser, password: 'wrong' });
-  await shopAssertions.loginError('Username and password do not match any user in this service');
+  await shopAssertions.login.loginError('Username and password do not match any user in this service');
 });
 
 test('NOVASHOP-08 P1: Locked user cannot log in', async ({ shop, users, shopAssertions }) => {
   await shop.login.open();
   await shop.login.signIn(users.lockedUser);
-  await shopAssertions.loginError('Sorry, this user has been locked out.');
+  await shopAssertions.login.loginError('Sorry, this user has been locked out.');
 });
 
 test('NOVASHOP-09 P2: Empty login form', async ({ shop, shopAssertions }) => {
   await shop.login.open();
   await shop.login.signIn({ username: '', password: '', name: 'Empty account' });
-  await shopAssertions.loginError('Username is required');
+  await shopAssertions.login.loginError('Username is required');
 });
 
 test('NOVASHOP-14 P2: Slow user login waits for products', async ({ shop, users }) => {

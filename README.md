@@ -44,6 +44,10 @@ npx playwright test -g NOVASHOP-01
 
 Each run generates the self-contained reportingLabs report at `reporting-labs/index.html`. Playwright traces and screenshots for failures are saved under `test-results/`.
 
+## Documentation
+
+Detailed guides for the page objects, fixtures, tests, page-wise assertions, environment, reports, and CI are in the [documents folder](documents/README.md).
+
 ## Project Layout
 
 - `pages/login-page.ts`: sign-in and sign-out actions
@@ -53,9 +57,10 @@ Each run generates the self-contained reportingLabs report at `reporting-labs/in
 - `pages/checkout-page.ts`: shipping, payment, and order submission
 - `pages/orders-page.ts`: order history navigation
 - `pages/fixtures.ts`: typed test-user data and reusable page-object fixtures
-- `pages/assertions.ts`: shared, retrying assertions
+- `assertions/`: page-specific, retrying assertions composed by the assertion fixture
 - `tests/*.spec.ts`: separate workflow suites linked to the CSV IDs
 - `tests/test-helpers.ts`: shared setup and reporting metadata
+- `documents/`: code and workflow guides
 - `playwright.config.ts`: browser, `.env`, and reporter configuration
 - `.github/workflows/playwright.yml`: GitHub Actions CI workflow
 

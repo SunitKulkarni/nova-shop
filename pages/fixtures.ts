@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { test as base, type Page } from '@playwright/test';
-import { ShopAssertions } from './assertions';
+import { createShopAssertions, type ShopAssertions } from '../assertions';
 import { CartPage } from './cart-page';
 import { CheckoutPage } from './checkout-page';
 import { LoginPage } from './login-page';
@@ -53,7 +53,7 @@ export const test = base.extend<{
 		});
 	},
 	shopAssertions: async ({ page }, use) => {
-		await use(new ShopAssertions(page));
+		await use(createShopAssertions(page));
 	},
 	users: async ({}, use) => {
 		await use(users);

@@ -9,7 +9,7 @@ test('NOVASHOP-02 P1: Buy a product end to end', async ({ shop, users, shopAsser
   await shop.checkout.fillCardDetails();
   await shop.checkout.acceptTerms();
   await shop.checkout.placeOrder();
-  expect(await shopAssertions.orderConfirmation()).toMatch(/^NS-\d+$/);
+  expect(await shopAssertions.checkout.orderConfirmation()).toMatch(/^NS-\d+$/);
 });
 
 test('NOVASHOP-06 P1: Order appears in history', async ({ shop, users, shopAssertions }) => {
@@ -18,25 +18,24 @@ test('NOVASHOP-06 P1: Order appears in history', async ({ shop, users, shopAsser
   await shop.checkout.fillCardDetails();
   await shop.checkout.acceptTerms();
   await shop.checkout.placeOrder();
-  const orderId = await shopAssertions.orderConfirmation();
+  const orderId = await shopAssertions.checkout.orderConfirmation();
   await shop.orders.open();
-  await expect(shop.page.getByText(orderId)).toBeVisible();
+  await shopAssertions.orders.orderIsListed(orderId);
 });
 
-test('NOVASHOP-11 P1: Declined card', async ({ shop, users }) => {
+test('NOVASHOP-11 P1: Declined card', async ({ shop, users, shopAssertions }) => {
   await addProductToCart(shop, users.validUser);
   await continueToCheckout(shop);
   await shop.checkout.fillCardDetails('4000 0000 0000 0002');
   await shop.checkout.acceptTerms();
   await shop.checkout.placeOrder();
-  await expect(shop.page.getByText(/payment.*declined|card.*declined/i)).toBeVisible();
-  await expect(shop.page.getByText(/NS-\d+/)).toHaveCount(0);
+  await shopAssertions.checkout.paymentDeclined();
+  await shopAssertions.checkout.noOrderWasCreated();
 });
 
-test('NOVASHOP-12 P2: Checkout with empty form', async ({ shop, users }) => {
+test('NOVASHOP-12 P2: Checkout with empty form', async ({ shop, users, shopAssertions }) => {
   await addProductToCart(shop, users.validUser);
   await shop.cart.checkout();
   await shop.checkout.placeOrder();
-  await expect(shop.page.getByTestId('form-errors')).toBeVisible();
-  await expect(shop.page.getByText(/required/i).first()).toBeVisible();
+  await shopAssertions.checkout.validationSummary();
 });

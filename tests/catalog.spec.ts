@@ -13,21 +13,20 @@ test('NOVASHOP-04 P2: Sort products by price low to high', async ({ shop, users 
   expect(prices).toEqual([...prices].sort((first, second) => first - second));
 });
 
-test('NOVASHOP-05 P2: Search narrows the grid', async ({ shop, users }) => {
+test('NOVASHOP-05 P2: Search narrows the grid', async ({ shop, users, shopAssertions }) => {
   await shop.login.open();
   await shop.login.signIn(users.validUser);
   await shop.products.searchFor('headphones');
-  await expect(shop.products.productCards).toHaveCount(1);
+  await shopAssertions.products.productCount(1);
   await expect(shop.products.productCards).toContainText(headphones);
   await expect(shop.page.getByText('Showing 1 of 12 products')).toBeVisible();
 });
 
-test('NOVASHOP-16 P3: Maximum quantity in cart disables add button', async ({ shop, users }) => {
+test('NOVASHOP-16 P3: Maximum quantity in cart disables add button', async ({ shop, users, shopAssertions }) => {
   await shop.login.open();
   await shop.login.signIn(users.validUser);
   await shop.products.openProduct(headphones);
   await shop.product.fillMaximumAvailableQuantity();
   await shop.product.addToCart();
-  await expect(shop.product.addButton).toBeDisabled();
-  await expect(shop.product.addButton).toHaveText('Max quantity in cart');
+  await shopAssertions.product.maximumQuantityReached();
 });
