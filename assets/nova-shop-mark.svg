@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200" role="img" aria-labelledby="title description">
+  <title id="title">Nova Shop quality engineering</title>
+  <desc id="description">A teal shopping bag and gold check mark beside the Nova Shop automation project name.</desc>
+  <rect width="900" height="200" rx="16" fill="#142A32"/>
+  <rect x="34" y="28" width="144" height="144" rx="22" fill="#1B776C"/>
+  <path d="M72 78h68l8 68H64l8-68Z" fill="none" stroke="#F7F5EF" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M88 82V68a18 18 0 0 1 36 0v14" fill="none" stroke="#F7F5EF" stroke-width="8" stroke-linecap="round"/>
+  <path d="m91 116 13 13 25-28" fill="none" stroke="#E3B45D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="218" y="94" fill="#F7F5EF" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700">NOVA SHOP</text>
+  <text x="220" y="135" fill="#AFC6C1" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="2">QUALITY ENGINEERING | PLAYWRIGHT</text>
+  <rect x="220" y="153" width="90" height="4" rx="2" fill="#E3B45D"/>
+</svg>

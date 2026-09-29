@@ -1,40 +1,65 @@
-# Nova Shop Playwright Automation
+<p align="center">
+	<img src="assets/nova-shop-mark.svg" alt="Nova Shop quality engineering" width="720">
+</p>
 
-This project contains end-to-end browser tests for the Nova Shop practice application at PracticeQAAutomation. Tests use Playwright Test, Page Object Model classes, custom fixtures, web-first assertions, and the test accounts in `tests/user.json`.
+<h1 align="center">Nova Shop Automation</h1>
 
-The regression cases map to the IDs in `tests/test_data/NovaShop-test-cases.csv` and are grouped by workflow:
+<p align="center">
+	A maintainable Playwright suite for testing shopping journeys, checkout behavior, and order history.
+</p>
 
-- `tests/auth.spec.ts`: sign-in and route protection
-- `tests/catalog.spec.ts`: product sorting, search, and quantity limits
-- `tests/cart-coupons.spec.ts`: valid and invalid coupons
-- `tests/checkout.spec.ts`: order placement, payment failure, and validation
-- `tests/end-to-end.spec.ts`: complete purchase and cart persistence flows
+<p align="center">
+	<img src="https://img.shields.io/badge/Playwright-1.63-2EAD33?logo=playwright&logoColor=white" alt="Playwright 1.63">
+	<img src="https://img.shields.io/badge/TypeScript-7-3178C6?logo=typescript&logoColor=white" alt="TypeScript 7">
+	<img src="https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white" alt="GitHub Actions CI">
+	<img src="https://img.shields.io/badge/Test%20cases-19-147D6A" alt="19 automated cases">
+</p>
 
-Shared setup helpers and report metadata are in `tests/test-helpers.ts`.
+<p align="center">
+	<a href="https://www.practiceqaautomation.com/shop">Practice app</a> |
+	<a href="documents/README.md">Project guides</a> |
+	<a href="tests/test_data/NovaShop-test-cases.csv">Test case source</a>
+</p>
 
-## Requirements
+## Project Overview
 
-- Node.js 20 or newer
-- npm
+This repository automates the [Nova Shop practice application](https://www.practiceqaautomation.com/shop) with Playwright Test and TypeScript. It demonstrates Page Object Model design, reusable fixtures, page-specific assertions, environment-based configuration, CI, and HTML test reporting.
 
-## Setup
+The suite contains **19 independent scenarios** mapped to the case IDs in `tests/test_data/NovaShop-test-cases.csv`. Tests use the practice accounts stored in `tests/user.json`.
+
+| Area | Coverage |
+| --- | --- |
+| Authentication | Valid, locked, slow, incorrect, and empty login scenarios |
+| Product catalog | Search, price sorting, and maximum available quantity |
+| Cart and coupons | Quantity changes, valid/invalid coupons, and threshold handling |
+| Checkout | Required fields, successful payment, declined payment, and recovery |
+| Orders | Order confirmation and order history |
+
+## Quick Start
+
+**Requirements:** Node.js 20 or newer and npm.
 
 ```bash
 npm ci
 npx playwright install chromium
 ```
 
-Copy `.env.example` to `.env` and adjust `SHOP_BASE_URL` or `TEST_ENV` if needed. The default URL points to the public practice shop. `.env` is ignored by Git; user accounts remain in `tests/user.json` as required by the practice app.
-
-## Run Tests
+Copy `.env.example` to `.env` to set the app URL and report environment label. The checked-in sample values target the public practice site; `.env` is ignored by Git.
 
 ```bash
 npm test
-npm run test:headed
-npm run test:ui
 ```
 
-To run a single case, use its CSV ID:
+## Test Commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm test` | Run the full Chromium suite |
+| `npm run test:headed` | Run with a visible browser |
+| `npm run test:ui` | Open Playwright's test UI |
+| `npm run typecheck` | Type-check the TypeScript source |
+
+Run a specific CSV case by ID:
 
 ```bash
 npx playwright test -g NOVASHOP-01
@@ -42,26 +67,34 @@ npx playwright test -g NOVASHOP-01
 
 ## Reports
 
-Each run generates the self-contained reportingLabs report at `reporting-labs/index.html`. Playwright traces and screenshots for failures are saved under `test-results/`.
+The reportingLabs reporter creates a self-contained report at `reporting-labs/index.html`. Screenshots for failed tests and traces on retry are saved under `test-results/`.
+
+## CI
+
+GitHub Actions runs the suite on pushes and pull requests to `main` or `master`. It installs Node.js 22 and Chromium, runs `npm test`, and uploads the report and test artifacts for 30 days. Workflow definition: [`.github/workflows/playwright.yml`](.github/workflows/playwright.yml).
+
+## Project Structure
+
+```text
+assertions/       Page-specific web-first checks
+documents/        Guides to the code and workflow
+pages/            One Page Object Model per app page, plus fixtures
+tests/            Workflow suites and shared test helpers
+	test_data/      CSV source cases
+```
+
+The test suites are organized by workflow:
+
+| Spec file | Focus |
+| --- | --- |
+| `tests/auth.spec.ts` | Login and route protection |
+| `tests/catalog.spec.ts` | Search, sorting, and product quantity |
+| `tests/cart-coupons.spec.ts` | Coupon behavior |
+| `tests/checkout.spec.ts` | Checkout validation and payment outcomes |
+| `tests/end-to-end.spec.ts` | Multi-step shopping flows |
+
+Page objects live in separate modules such as `pages/login-page.ts` and `pages/checkout-page.ts`. The `shop` and `shopAssertions` fixtures in `pages/fixtures.ts` provide the page objects and assertion helpers to each test.
 
 ## Documentation
 
-Detailed guides for the page objects, fixtures, tests, page-wise assertions, environment, reports, and CI are in the [documents folder](documents/README.md).
-
-## Project Layout
-
-- `pages/login-page.ts`: sign-in and sign-out actions
-- `pages/products-page.ts`: catalog search, sorting, product navigation, and cart access
-- `pages/product-page.ts`: product details and add-to-cart actions
-- `pages/cart-page.ts`: coupon, quantity, and checkout actions
-- `pages/checkout-page.ts`: shipping, payment, and order submission
-- `pages/orders-page.ts`: order history navigation
-- `pages/fixtures.ts`: typed test-user data and reusable page-object fixtures
-- `assertions/`: page-specific, retrying assertions composed by the assertion fixture
-- `tests/*.spec.ts`: separate workflow suites linked to the CSV IDs
-- `tests/test-helpers.ts`: shared setup and reporting metadata
-- `documents/`: code and workflow guides
-- `playwright.config.ts`: browser, `.env`, and reporter configuration
-- `.github/workflows/playwright.yml`: GitHub Actions CI workflow
-
-The CI workflow runs the Chromium suite for pushes and pull requests targeting `main` or `master`, then uploads reports and failure artifacts.
+Start at the [documentation index](documents/README.md), with dedicated guides for [Page Objects](documents/pages.md), [Fixtures](documents/fixtures.md), [Tests](documents/tests.md), [Assertions](documents/assertions.md), and [Configuration and CI](documents/configuration-and-ci.md).
