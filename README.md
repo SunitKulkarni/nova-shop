@@ -46,7 +46,12 @@ Each run generates the self-contained reportingLabs report at `reporting-labs/in
 
 ## Project Layout
 
-- `pages/shop-pages.ts`: locators and actions for each shop page
+- `pages/login-page.ts`: sign-in and sign-out actions
+- `pages/products-page.ts`: catalog search, sorting, product navigation, and cart access
+- `pages/product-page.ts`: product details and add-to-cart actions
+- `pages/cart-page.ts`: coupon, quantity, and checkout actions
+- `pages/checkout-page.ts`: shipping, payment, and order submission
+- `pages/orders-page.ts`: order history navigation
 - `pages/fixtures.ts`: typed test-user data and reusable page-object fixtures
 - `pages/assertions.ts`: shared, retrying assertions
 - `tests/*.spec.ts`: separate workflow suites linked to the CSV IDs

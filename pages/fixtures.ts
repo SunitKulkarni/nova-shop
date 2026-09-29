@@ -2,14 +2,12 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { test as base, type Page } from '@playwright/test';
 import { ShopAssertions } from './assertions';
-import {
-	CartPage,
-	CheckoutPage,
-	LoginPage,
-	OrdersPage,
-	ProductPage,
-	ProductsPage,
-} from './shop-pages';
+import { CartPage } from './cart-page';
+import { CheckoutPage } from './checkout-page';
+import { LoginPage } from './login-page';
+import { OrdersPage } from './orders-page';
+import { ProductPage } from './product-page';
+import { ProductsPage } from './products-page';
 
 export interface TestUser {
 	username: string;
